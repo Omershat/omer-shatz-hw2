@@ -97,10 +97,10 @@ std::string Profile::getFriendsWithSameNameLength() const
 		friendName = friendNode->get_data().getUserName();
 
 		// check if the length of the names are equal
-		if (ownerName.size() != friendName.size())
+		if (ownerName.size() == friendName.size())
 		{
 			// add to the string
-			friends += friendName;
+			friends += friendName + FRIENDS_DEVIDER;
 		}
 
 		// go to the next node
